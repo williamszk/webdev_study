@@ -24,9 +24,15 @@ ifconfig
 
 
 
+docker ps -a
 
+docker start webdev_study
+docker exec -it webdev_study /bin/bash
 
+cd ~
+git clone https://github.com/williamszk/webdev_study.git
 
+apt install nodejs npm -y
 
-
-
+# to install the packages from the package.json that is already in the project
+npm install
