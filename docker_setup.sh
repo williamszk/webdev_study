@@ -36,3 +36,9 @@ apt install nodejs npm -y
 
 # to install the packages from the package.json that is already in the project
 npm install
+
+
+# to install nodemon
+# it is good because we don't need to restart the node server again and again
+npm install -g nodemon
+# nodemon server.js
