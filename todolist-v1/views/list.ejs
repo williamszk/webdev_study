@@ -1,0 +1,19 @@
+<%- include("header"); -%> 
+    <div class="box" id="heading">
+      <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+      <% for (let i = 0; i < myNewItemArray.length; i++) { %>
+      <div class="item">
+        <input type="checkbox" />
+        <p><%= myNewItemArray[i] %></p>
+      </div>
+      <% } %>
+      <form action="/" method="post" class="item">
+        <label for="newItemList"></label>
+        <input type="text" id="newItemList" name="myNewItem" placeholder="New Item" autocomplete="off"/>
+        <button type="submit" name="list" value=<%= listTitle  %>>+</button>
+      </form>
+    </div>
+<%- include("footer"); -%>
