@@ -1,0 +1,36 @@
+<%- include("partials/header"); -%>
+
+<h1>Compose</h1>
+
+<form action="/compose" method="post">
+  <div class="form-group">
+    <label for="titleText">Title</label>
+    <input
+      type="text"
+      id="titleText"
+      name="textTitlePineApple"
+      size="40"
+      class="form-control"
+    />
+
+    <label for="contentText">Post</label>
+    <textarea
+      type="text"
+      id="contentText"
+      name="textContentPineApple"
+      cols="40"
+      rows="8"
+      class="form-control"
+    ></textarea>
+  </div>
+  <button
+    type="submit"
+    name="composeBananas"
+    value="composeInputValueApples"
+    class="btn btn-primary"
+  >
+    Publish
+  </button>
+</form>
+
+<%- include("partials/footer"); -%>
