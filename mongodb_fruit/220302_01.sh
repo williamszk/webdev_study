@@ -1,3 +1,53 @@
+# setting up mongodb server
+
+service mongod status
+service mongodb status
+service mongod start
+
+service mongod status
+service mongod start
+mongod
+service mongod status
+mongodb
+service mongodb status
+service mongodb start
+mongod --version
+mongod --fork --config /etc/mongod.conf
+service mongodb start
+apt install mongodb-server
+service mongodb status
+service mongodb start
+mongod --dbpath ~/mongodb
+ls
+mkdir mongodb/db
+mkdir mongodb
+cd mongodb/
+mkdir db
+ls
+cd ..
+service mongod status
+service mongod start
+cd /etc/init.d/
+ls
+touch mongod
+vim mongod
+vi mongod
+apt install vim
+vim mongod
+cd
+service mongod status
+service mongod start
+cd /etc/init.d/
+ls
+cat mongodb
+cd
+service mongodb status
+service mongodb start
+service mongodb status
+mongosh
+cd
+
+
 # mongosh tutorial from webdev course
 
 mongosh
