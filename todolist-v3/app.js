@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// Here I think we are connecting with MongoDB Atlas
 const secret = JSON.parse(fs.readFileSync("secret.json"));
 mongoose.connect(
   "mongodb+srv://admin-william:" +
