@@ -1,3 +1,18 @@
 h1 {
-    color: red;
+  color: red;
+}
+
+.villager {
+  position: absolute;
+  height: auto;
+  width: 30px;
+}
+
+.main-map {
+  position: absolute;
+  background-color: green;
+  /* height: 90px;
+  width: 90px; */
+  height: 80%;
+  width: 80%;
 }

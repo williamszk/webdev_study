@@ -1,6 +1,6 @@
 // alert("Hello there!");
 
-document.querySelector("h1").innerHTML = "Good bye!";
+// document.querySelector("h1").innerHTML = "Good bye!";
 
 // document.getElementsByTagName()
 // document.getElementsByClassName()
@@ -28,10 +28,38 @@ document.querySelector("h1").innerHTML = "Good bye!";
 
 
 
+// take a look at this:
+// functionality to drag and select items
+// https://thibaultjanbeyer.github.io/dragNdrop/
+// it shows drag and drop functionality
+
+// https://stackoverflow.com/a/46072206/15875971
+// https://github.com/ThibaultJanBeyer/DragSelect
+
+// https://dragselect.com/
 
 
 
 
+// Villager
 
+const villagerImg = () => {
+	/* a function that returns the villager image
+	*
+	*/
+	return "assets/images/villager_01.png";
+}
+
+const includeVillager = () => {
+	/* Function that includes a new villager in the map
+	* 
+	*/
+	const theHtml = `
+		<div>
+			<img src=`+ villagerImg() + ` alt="villager" class="villager">
+		</div>
+	`;
+	document.querySelector("#the-map").innerHTML += theHtml;
+}
 
 
