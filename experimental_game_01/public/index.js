@@ -1,0 +1,65 @@
+// alert("Hello there!");
+
+// document.querySelector("h1").innerHTML = "Good bye!";
+
+// document.getElementsByTagName()
+// document.getElementsByClassName()
+// document.getElementById()
+
+// let anelement01 = document.getElementsByTagName("h1");
+// console.log(anelement01)
+// console.log(typeof(anelement01));
+
+// let anelement01 = document.querySelector("h1");
+// console.log(anelement01);
+// console.log(typeof(anelement01));
+
+// document.querySelector("#title");
+// document.querySelector("li a");
+// document.querySelector("li.item"); // comnination of selectors, those are characteristics that are in the same level in the html element
+// document.querySelector("#list a"); // this is called a hierarchical selector given the same between the two selectors
+// document.querySelectorAll("#list a"); // this will return an array with all the elements that match the query
+
+// document.querySelector("button").classList; // this gives a list of the classes in the element
+// document.querySelector("button").classList.add("mynewclass") // how to add a new class
+// document.querySelector("button").classList.remove("mynewclass")
+// document.querySelector("button").classList.toggle("mynewclass")
+
+
+
+
+// take a look at this:
+// functionality to drag and select items
+// https://thibaultjanbeyer.github.io/dragNdrop/
+// it shows drag and drop functionality
+
+// https://stackoverflow.com/a/46072206/15875971
+// https://github.com/ThibaultJanBeyer/DragSelect
+
+// https://dragselect.com/
+
+
+
+
+// Villager
+
+const villagerImg = () => {
+	/* a function that returns the villager image
+	*
+	*/
+	return "assets/images/villager_01.png";
+}
+
+const includeVillager = () => {
+	/* Function that includes a new villager in the map
+	* 
+	*/
+	const theHtml = `
+		<div>
+			<img src=`+ villagerImg() + ` alt="villager" class="villager">
+		</div>
+	`;
+	document.querySelector("#the-map").innerHTML += theHtml;
+}
+
+
