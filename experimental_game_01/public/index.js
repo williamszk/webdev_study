@@ -39,7 +39,7 @@
 // https://dragselect.com/
 
 
-
+let dataState = {villagerCount: 0, villagers:[]};
 
 // Villager
 
@@ -54,12 +54,19 @@ const includeVillager = () => {
 	/* Function that includes a new villager in the map
 	* 
 	*/
+	// increase then state of quantity of villagers
+	dataState.villagerCount += 1;
+	// template strings
 	const theHtml = `
-		<div>
-			<img src=`+ villagerImg() + ` alt="villager" class="villager">
+		<div id="villager-${dataState.villagerCount}">
+			<img src=${villagerImg()} alt="villager" class="villager">
 		</div>
 	`;
 	document.querySelector("#the-map").innerHTML += theHtml;
+
+	dataState.villagers.push({"id": 1});
+	console.log(dataState);
+
 }
 
 
