@@ -25,9 +25,6 @@
 // document.querySelector("button").classList.remove("mynewclass")
 // document.querySelector("button").classList.toggle("mynewclass")
 
-
-
-
 // take a look at this:
 // functionality to drag and select items
 // https://thibaultjanbeyer.github.io/dragNdrop/
@@ -38,35 +35,67 @@
 
 // https://dragselect.com/
 
-
-let dataState = {villagerCount: 0, villagers:[]};
+let dataState = { villagerCount: 0, villagers: [] };
 
 // Villager
 
 const villagerImg = () => {
-	/* a function that returns the villager image
-	*
-	*/
-	return "assets/images/villager_01.png";
-}
+  /* a function that returns the villager image
+   *
+   */
+  return "assets/images/villager_01.png";
+};
 
 const includeVillager = () => {
-	/* Function that includes a new villager in the map
-	* 
-	*/
-	// increase then state of quantity of villagers
-	dataState.villagerCount += 1;
-	// template strings
-	const theHtml = `
+  /* Function that includes a new villager in the map
+   *
+   */
+  // increase then state of quantity of villagers
+  dataState.villagerCount += 1;
+  // template strings
+  const theHtml = `
 		<div id="villager-${dataState.villagerCount}">
 			<img src=${villagerImg()} alt="villager" class="villager">
 		</div>
 	`;
-	document.querySelector("#the-map").innerHTML += theHtml;
+  document.querySelector("#the-map").innerHTML += theHtml;
 
-	dataState.villagers.push({"id": 1});
-	console.log(dataState);
+  const villagerId = dataState.villagerCount;
+  dataState.villagers.push({ id: villagerId });
+  console.log(dataState);
 
+  return villagerId;
+};
+
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * max);
 }
 
+const teleportVillagerToRandomPosition = (villagerId) => {
+  const maxRangePosition = 400;
+  const newPositionLeft = getRandomInt(maxRangePosition);
+  const newPositionRight = getRandomInt(maxRangePosition);
+  document.querySelector(`#villager-${villagerId}`).style.position = "absolute";
+  document.querySelector(
+    `#villager-${villagerId}`
+  ).style.left = `${newPositionLeft}px`;
+  document.querySelector(
+    `#villager-${villagerId}`
+  ).style.top = `${newPositionRight}px`;
+};
 
+const main = () => {
+  let villagerId;
+  villagerId = includeVillager();
+	teleportVillagerToRandomPosition(villagerId);
+  
+	villagerId = includeVillager();
+	teleportVillagerToRandomPosition(villagerId);
+
+	villagerId = includeVillager();
+	teleportVillagerToRandomPosition(villagerId);
+
+
+};
+
+main();
