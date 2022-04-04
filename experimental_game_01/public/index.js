@@ -43,7 +43,8 @@ const villagerImg = () => {
   /* a function that returns the villager image
    *
    */
-  return "assets/images/villager_01.png";
+  // return "assets/images/villager_01.png";
+  return "assets/images/220404-villager-45deg-16x16.png";
 };
 
 const includeVillager = () => {
@@ -72,7 +73,7 @@ const getRandomInt = (max) => {
 }
 
 const teleportVillagerToRandomPosition = (villagerId) => {
-  const maxRangePosition = 400;
+  const maxRangePosition = 600;
   const newPositionLeft = getRandomInt(maxRangePosition);
   const newPositionRight = getRandomInt(maxRangePosition);
   document.querySelector(`#villager-${villagerId}`).style.position = "absolute";
@@ -95,6 +96,11 @@ const main = () => {
 	villagerId = includeVillager();
 	teleportVillagerToRandomPosition(villagerId);
 
+  villagerId = includeVillager();
+	teleportVillagerToRandomPosition(villagerId);
+
+  villagerId = includeVillager();
+	teleportVillagerToRandomPosition(villagerId);
 
 };
 
