@@ -1,0 +1,29 @@
+body {
+	margin: 0px;
+	position: absolute;
+}
+
+h1 {
+	color: aqua;
+}
+
+.tile-img {
+	height: 36px;
+	width: 64px;
+	position: absolute;
+}
+
+.tile-div {
+	height: 36px;
+	width: 64px;
+	position: absolute;	
+}
+
+#map {
+	position: absolute;
+	/* 25*64, (num pixel horizontal) * (width of tile) */
+	width: 1600px; 
+	/* 25*32, (num pixel vertical) * (height of tile) */
+	height: 800px;
+	background-color: green;
+}

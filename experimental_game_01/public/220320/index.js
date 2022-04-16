@@ -44,7 +44,7 @@ const villagerImg = () => {
    *
    */
   // return "assets/images/villager_01.png";
-  return "assets/images/220404-villager-45deg-16x16.png";
+  return "assets/220404-villager-45deg-16x16.png";
 };
 
 const includeVillager = () => {
