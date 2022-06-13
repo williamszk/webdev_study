@@ -22,7 +22,7 @@ const axios = require("axios");
 		});
 })();
 
-console.log(">>> Message from mockClient: I ran here!");
+// console.log(">>> Message from mockClient: I ran here!");
 
 (() => {
 	const URL = "http://localhost:5000/todos";
@@ -38,9 +38,8 @@ console.log(">>> Message from mockClient: I ran here!");
 		});
 })();
 
-
 (() => {
-	const URL = "http://localhost:5000/todos/1";
+	const URL = "http://localhost:5000/todos/2";
 
 	axios
 		.get(URL)
@@ -50,5 +49,33 @@ console.log(">>> Message from mockClient: I ran here!");
 		})
 		.catch((err) => {
 			console.error(err);
+		});
+})();
+
+(() => {
+	const URL = "http://localhost:5000/todos/2";
+
+	axios
+		.put(URL, { description: "This is a changed description" })
+		.then((res) => {
+			console.log(">>> PUT request to change just 1 object");
+			console.log(res.data);
+		})
+		.catch((err) => {
+			console.error(err);
+		});
+})();
+
+(() => {
+	const URL = "http://localhost:5000/todos/3";
+
+	axios
+		.delete(URL)
+		.then((res) => {
+			console.log(">>> DELETE request");
+			console.log(res.data);
+		})
+		.catch((err) => {
+			console.error(err.message);
 		});
 })();
