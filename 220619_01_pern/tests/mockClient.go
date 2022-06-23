@@ -58,8 +58,25 @@ func main() {
 
 		sb := string(body)
 
-		log.Println("2. Response from the POST request of all todo items")
+		log.Println("2. Response from the POST request")
 		log.Println(sb)
 	}()
 
+	// func() {
+	// 	url := "http://localhost:5000/todos/2"
+	// 	resp, err := http.Get(url)
+	// 	if err != nil {
+	// 		log.Fatalln(err)
+	// 	}
+
+	// 	body, err := ioutil.ReadAll(resp.Body)
+	// 	if err != nil {
+	// 		log.Fatalln(err)
+	// 	}
+
+	// 	sb := string(body)
+
+	// 	log.Println("3. Response from the GET request for 1 specific item")
+	// 	log.Println(sb)
+	// }()
 }

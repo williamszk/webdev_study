@@ -25,16 +25,13 @@ For more references this is the continuation of the projects:
 - Include requests for GET one specific item in the todo.
     Include request for PUT and change one item.
     And for DELETE.
-
-
-
+- Test when the postgres server is down. What is the error?
 
 # Some ideas:
 - We could test a way to purposefully take down the database.
 And see what we can do to make the application work.
 We can explore different architectural objectives, for example:
 Fault Tolerant and High Availability aims.
-
 
 
 # Last stop, check point:

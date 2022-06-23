@@ -11,5 +11,5 @@ const pool = new Pool({
 	port: 5432,
 	database: "perntodo",
 });
-
+// console.log(pool);
 module.exports = pool;
