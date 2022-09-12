@@ -1,19 +1,26 @@
 import { dbank } from "../../declarations/dbank";
 
-document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const button = e.target.querySelector("button");
+window.addEventListener("load", async function () {
+	// console.log("Hello");
 
-  const name = document.getElementById("name").value.toString();
-
-  button.setAttribute("disabled", true);
-
-  // Interact with foo actor, calling the greet method
-  const greeting = await dbank.greet(name);
-
-  button.removeAttribute("disabled");
-
-  document.getElementById("greeting").innerText = greeting;
-
-  return false;
+	const currentAmout = await dbank.checkBalance();
+	this.document.getElementById("value").innerText = currentAmout.toFixed(2);
 });
+
+document.querySelector("form").addEventListener("submit", async function(event){
+    event.preventDefault;
+
+    console.log("Submitted");
+    
+    const inputAmout = parseFloat(document.getElementById("input-amout").value);
+    const withdrawAmout = parseFloat(document.getElementById("withdraw-amount").value); 
+
+    await dbank.topUp(inputAmout);
+	const currentAmout = await dbank.checkBalance();
+	this.document.getElementById("value").innerText = currentAmout.toFixed(2);
+
+    // await dbank.withdraw(withdrawAmout);
+
+});
+
+
