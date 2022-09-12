@@ -8,7 +8,7 @@ actor DBank {
 
   // the stable key word will persist the variable 
   // even if we redeploy the canister
-  stable var currentValue: Float = 300.00;
+  var currentValue: Float = 300.00;
   // the opposite of stable is flexible which is what 
   // programming languages usually do
 
@@ -63,7 +63,7 @@ actor DBank {
 
     let timeElapsedS = timeElapsedNS/1_000_000_000;
 
-    currentValue :=  currentValue * ( 1.001  ** Float.fromInt(timeElapsedS));
+    currentValue :=  currentValue * ( 1.0005  ** Float.fromInt(timeElapsedS));
 
     startTime := currentTime;
   };
